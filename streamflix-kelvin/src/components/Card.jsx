@@ -12,7 +12,7 @@ const Card = () => {
   }, []);
   return (
     <>
-      <h1 className="pt-10 px-20 font-light text-3xl">Now Playing</h1>
+      <h1 className="pt-10 px-4 md:px-20 font-light text-3xl">Now Playing</h1>
       <div className="flex flex-wrap justify-center mt-10">
         {playingMovies.map((movie, i) => {
           return <CardInfo key={i} {...movie} />;

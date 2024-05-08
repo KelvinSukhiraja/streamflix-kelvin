@@ -6,7 +6,6 @@ const rupiah = (number) => {
 };
 
 export const Price = (rate) => {
-  console.log(rate);
   let valuePrice = 0;
   if (rate < 4) {
     valuePrice = 3500;
@@ -19,6 +18,5 @@ export const Price = (rate) => {
   } else {
     valuePrice = 0;
   }
-  console.log(valuePrice);
-  return rupiah(valuePrice);
+  return valuePrice;
 };
