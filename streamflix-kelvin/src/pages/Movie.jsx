@@ -3,11 +3,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { SlugId } from "../services/Slug";
 import { Price } from "../services/Price";
-import { useNavigate } from "react-router-dom";
 
 const Movie = () => {
   const movieId = SlugId();
-  const navigate = useNavigate();
   const BASEURL = "https://api.themoviedb.org/3";
   const APIKEY = "2e65b9283fb2bea5e3b2cf4ec2d1b5df";
   const BASEIMAGEURL = "https://image.tmdb.org/t/p/original/";
@@ -91,7 +89,7 @@ const Movie = () => {
                   <img
                     className="h-72 object-cover cursor-pointer"
                     onClick={() =>
-                      navigate(`/${rec.id}/${rec.title.replace(/ /g, "-")}`)
+                      navigate(`${rec.id}/${rec.title.replace(/ /g, "-")}`)
                     }
                     src={`${BASEIMAGEURL}${rec.poster_path}`}
                   />
