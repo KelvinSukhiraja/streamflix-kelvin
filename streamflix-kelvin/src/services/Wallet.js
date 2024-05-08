@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 
 export const rupiah = (number) => {
   return new Intl.NumberFormat("id-ID", {
@@ -30,10 +29,10 @@ export const Purchase = (price) => {
   // if (wallet > price)
   console.log("test", price);
   if (wallet < price) {
-    toast.error("Insufficient Funds");
+    // toast.error("Insufficient Funds");
   } else {
     wallet = wallet - price;
-    toast.success("Transaction Successful");
+    // toast.success("Transaction Successful");
 
     console.log(wallet);
   }
