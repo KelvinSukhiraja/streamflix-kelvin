@@ -1,13 +1,15 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Movie from "./pages/Movie";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <div className="flex flex-col w-screen bg-black">
-        <Navbar />
-        {/* <Hero /> */}
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:Id/:Title" element={<Movie />} />
+      </Routes>
     </>
   );
 };
